@@ -1,1 +1,53 @@
+{
+  "@context": "https://www.w3.org/ns/dcat#",
+  "@type": "Dataset",
+  "dct:title": "Crimes – 2020",
+  "dct:description": "Reported crime incidents in the City of Chicago for the year 2020.",
+  "dct:publisher": {
+    "@type": "Organization",
+    "name": "City of Chicago"
+  },
+  "dct:identifier": "qzdf-xmn8",
+  "dct:issued": "2020",
+  "dct:spatial": "Chicago, Illinois, USA",
+  "dct:temporal": "2020-01-01/2020-12-31",
+  "dct:license": "Open Data Portal Terms of Use",
+  "dcat:keyword": [
+    "crime",
+    "public safety",
+    "Chicago",
+    "police reports"
+  ],
+  "dcat:distribution": {
+    "@type": "Distribution",
+    "dcat:accessURL": "https://data.cityofchicago.org/Public-Safety/Crimes-2020/qzdf-xmn8",
+    "dcat:mediaType": "text/csv"
+  }
+}
 
+{
+  "@context": "https://www.w3.org/ns/dcat#",
+  "@type": "Dataset",
+  "dct:title": "Crime Data from 2020 to 2024",
+  "dct:description": "Crime incidents reported in the City of Los Angeles from 2020 through 2024, based on police reports.",
+  "dct:publisher": {
+    "@type": "Organization",
+    "name": "City of Los Angeles"
+  },
+  "dct:identifier": "2nrs-mtv8",
+  "dct:issued": "2020",
+  "dct:spatial": "Los Angeles, California, USA",
+  "dct:temporal": "2020-01-01/2024-12-31",
+  "dct:license": "Open Data Portal Terms of Use",
+  "dcat:keyword": [
+    "crime",
+    "public safety",
+    "Los Angeles",
+    "police reports"
+  ],
+  "dcat:distribution": {
+    "@type": "Distribution",
+    "dcat:accessURL": "https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-2024/2nrs-mtv8",
+    "dcat:mediaType": "text/csv"
+  }
+}
