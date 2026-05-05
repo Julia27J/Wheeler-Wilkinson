@@ -2,15 +2,29 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import hashlib
+
+def verify_data_integrity(data_string, expected_hash):
+    """Verifies that the data matches the expected SHA-256 hash."""
+    actual_hash = hashlib.sha256(data_string.encode('utf-8')).hexdigest()
+    
+    if actual_hash == expected_hash:
+        print("Hash match: Data is verified and untouched!")
+    else:
+        print("Hash mismatch! The data has been altered.")
+        print(f"Expected: {expected_hash}")
+        print(f"Actual:   {actual_hash}")
 
 print("==========================================")
 print(" Downloading datasets... (This may take 6-8 minutes)")
 print("==========================================")
 
+# Load Chicago Data
 chicago_url = 'https://data.cityofchicago.org/api/views/qzdf-xmn8/rows.csv?accessType=DOWNLOAD'
 chicago = pd.read_csv(chicago_url)
 print(f"Chicago dataset loaded. Shape: {chicago.shape}")
 
+# Load LA Data
 la_url = 'https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD'
 LA = pd.read_csv(la_url)
 print(f"LA dataset loaded. Shape: {LA.shape}")
@@ -22,7 +36,7 @@ LA['DATE OCC'] = pd.to_datetime(LA['DATE OCC'])
 LA = LA[LA['DATE OCC'].dt.year == 2020]
 LA['DATE OCC'] = LA['DATE OCC'].dt.strftime('%m/%d/%Y %I:%M:%S %p')
 
-# Unified Crime Mapping Dictionary
+# Unified Crime Mapping Dictionary (Generated via Gemini)
 unified_mapping = {
     'HOMICIDE': ['HOMICIDE', 'CRIMINAL HOMICIDE', 'MANSLAUGHTER, NEGLIGENT'],
     'ASSAULT & BATTERY': [
@@ -112,6 +126,11 @@ for new_category, old_values in unified_mapping.items():
 # Apply mapping
 chicago['Unified_Crime_Type'] = chicago['Primary Type'].str.strip().map(flat_mapping).fillna('UNMAPPED')
 LA['Unified_Crime_Type'] = LA['Crm Cd Desc'].str.strip().map(flat_mapping).fillna('UNMAPPED')
+
+print("\n--- Verifying Data Integrity (SHA-256) ---")
+EXPECTED_CHICAGO_HASH = "3d3c2dcd46ab8316cc87f1d4f35ffcf4282fb008970febce7e17e4a239080018"
+chicago_types_string = str(chicago['Unified_Crime_Type'].unique())
+verify_data_integrity(chicago_types_string, EXPECTED_CHICAGO_HASH)
 
 # Formatting columns
 chicago = chicago[['Date', 'Latitude', 'Longitude', 'Unified_Crime_Type']]
