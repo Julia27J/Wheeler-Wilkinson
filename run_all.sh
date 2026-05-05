@@ -25,12 +25,12 @@ pip install pandas matplotlib -q
 
 # 4. Execute the pipeline
 echo "[3/4] Executing pipeline.py..."
-echo "      (Note: Downloading the datasets may take 6-8 minutes)"
+echo "      (Note: Downloading data and verifying SHA-256 hashes...)"
 python3 pipeline.py
 
 # 5. Deactivate environment
 deactivate
 
 echo "[4/4] Pipeline execution complete!"
-echo "Check your directory for the cleaned CSV files."
+echo "Check your directory for the cleaned CSV files and generated PNG charts."
 echo "=========================================="
