@@ -140,39 +140,7 @@ Another challenge we ran into was conceptually transferring skills we practiced 
 
 The instructors have been given access to the original datasets, cleaned datasets, and combined dataset in our Box folder titled “IS 477 Project Data Wheeler & Wilkinson”. There are no restrictions on the use and distribution of these datasets because they are open government data, as long as the terms of use are abided by and the cities are attributed. 
 
-Our final workflow can be found in our GitHub repository labeled as “run_all.sh”. It is also pasted below
-
-#!/bin/bash
-
-set -e
-
-echo "=========================================="
-
-echo " Starting Wheeler Wilkinson Data Pipeline "
-
-echo "=========================================="
-
-if ! command -v python3 &> /dev/null; then
-
-    echo "Error: Python3 could not be found. Please install it to continue."
-
-    exit 1
-
-fi
-
-echo "[1/4] Setting up Python virtual environment..."
-python3 -m venv venv
-source venv/bin/activate
-echo "[2/4] Installing required libraries (pandas, matplotlib)..."
-pip install --upgrade pip -q
-pip install pandas matplotlib -q
-echo "[3/4] Executing pipeline.py..."
-echo "      (Note: Downloading data and verifying SHA-256 hashes...)"
-python3 pipeline.py
-deactivate
-echo "[4/4] Pipeline execution complete!"
-echo "Check your directory for the cleaned CSV files and generated PNG charts."
-echo "=========================================="
+Our final workflow can be found in our GitHub repository labeled as “run_all.sh”. 
 
 Metadata about the two datasets can be found in our GitHub repository in the file “metadata.json”. 
 
