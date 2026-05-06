@@ -99,7 +99,8 @@ The crime types identified varied between datasets in name, so we used Google Ge
 ## Findings
 To analyze and visualize our data, we used matplotlib to make histograms that would allow us to visualize the number of crimes that occurred in general during each month of 2020. We also wanted to analyze specific crime types, so we used the same process with matplotlib to create histograms for each type of crime. This allowed us to identify trends in each crime throughout 2020, specifically looking at the volume of crime that occurred surrounding the pandemic in March 2020. 
 
-<img width="868" height="711" alt="Crime_Types" src="https://github.com/user-attachments/assets/4544d250-b6aa-4776-99c0-ccb2088b01f5" />
+<img width="868" height="563" alt="Number_of_Crimes_Per_Month" src="https://github.com/user-attachments/assets/d4098a4d-d8d9-43d9-9def-11c7964572c6" />
+
 
 We used these visualizations and analyses to answer our research questions. Below are our findings in relation to our research questions. 
 Did crime increase or decrease after March 2020? 
@@ -107,6 +108,8 @@ Crime decreases directly following March 2020 in April 2020 in both Chicago and 
 
 Did specific types of crime increase or decrease after March 2020 as a consequence of quarantining? 
 Theft, sex offenses, and drugs and narcotics all appear to decrease in April 2020. Homicide decreased in March 2020 and significantly increased in July 2020. 
+
+<img width="400" height="400" alt="Theft" src="https://github.com/user-attachments/assets/491587b5-6563-4bb1-b42c-b0956a1df54d" />
 
 Is there a time of day or time of the year in which more crimes occur? 
 Crime appears to occur most often in January, followed by July and August. 
