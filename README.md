@@ -109,8 +109,6 @@ Crime decreases directly following March 2020 in April 2020 in both Chicago and 
 Did specific types of crime increase or decrease after March 2020 as a consequence of quarantining? 
 Theft, sex offenses, and drugs and narcotics all appear to decrease in April 2020. Homicide decreased in March 2020 and significantly increased in July 2020. 
 
-<img width="400" height="400" alt="Theft" src="https://github.com/user-attachments/assets/491587b5-6563-4bb1-b42c-b0956a1df54d" />
-
 Is there a time of day or time of the year in which more crimes occur? 
 Crime appears to occur most often in January, followed by July and August. 
 
