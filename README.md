@@ -143,14 +143,23 @@ The instructors have been given access to the original datasets, cleaned dataset
 Our final workflow can be found in our GitHub repository labeled as “run_all.sh”. It is also pasted below
 
 #!/bin/bash
+
 set -e
+
 echo "=========================================="
+
 echo " Starting Wheeler Wilkinson Data Pipeline "
+
 echo "=========================================="
+
 if ! command -v python3 &> /dev/null; then
+
     echo "Error: Python3 could not be found. Please install it to continue."
+
     exit 1
+
 fi
+
 echo "[1/4] Setting up Python virtual environment..."
 python3 -m venv venv
 source venv/bin/activate
