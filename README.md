@@ -3,7 +3,7 @@
 ## Contributors
 - Julia Wilkinson (jwilk8)
 - Paige Wheeler (paigecw2)
-- 
+  
 ## Summary
 Our project examines the impacts the COVID-19 Pandemic had on crime in large cities, specifically in Chicago and Los Angeles. To go about examining the impact, we looked at 2020 crime data published by the City of Chicago Police Department and Los Angeles City Police Department. We cleaned the datasets, dropped crimes that occurred after 2020, and combined them into one dataset, so we could more easily conduct our analysis. Our analysis revolved around answering our research questions, while incorporating concepts we discussed during lecture. Some of which include checking data integrity using checksums, combining two datasets into one dataset, researching the licensing for the use of the datasets, and ensuring our results are reproducible. We created visualizations that aided in answering our research questions and made a workflow so our project could be reproduced.
 
@@ -28,7 +28,7 @@ The original datasets were too large to load into our GitHub repository. However
 
 The following is a data dictionary of the variables used in the combined dataset, along with a description of what each variable means. 
 
-Data Dictionary
+### Data Dictionary
 
 Chicago Dataset
 
@@ -131,6 +131,7 @@ Our project could be less relevant to present day (2026) because our data is 5-6
 ## Challenges
 The original datasets were quite large which made them difficult to work with. We were unable to upload the raw data to Github and Paige was unable to download the raw data files to her computer. We were able to upload the cleaned datasets which were a lot smaller than the originals into our GitHub repository. We also were able to upload the original datasets to a folder in Box.
 We encountered a lot of issues with pushing our files into our GitHub repository. Challenges included properly organizing our downloaded files on our computers so that we could push them, having our Visual Studio Code logins linked with our GitHub usernames, and learning how to generate a GitHub token and use it during the commit process. We also had to override changes whenever one of us downloaded the .ipynb file from GitHub. Reorganizing our Project Plan folder on our desktops and resigning into Visual Studio Code resolved these issues. Further, we watched a detailed youtube video on generating and using GitHub tokens to learn how to use them for our submissions.
+
 We found it difficult to generate our snakemake workflow. We originally wrote our code into a .ipynb file in Jupyter Notebook because we are comfortable with this platform. Due to this, we then had to separate our .ipynb file into .py files that could be used for the workflow. Upon encountering more difficulties, we ended up using run_all.sh for our final workflow. 
 Another challenge we ran into was conceptually transferring skills we practiced during labs into our project. The labs used specific files and customized code that was not applicable to our project. However, we had no prior experience with the concepts, so we found it difficult to translate everything into our assignment smoothly. For example, before this class neither of us have checked data integrity, used SHA-256 checksums, made a snakemake, ran code in .py files, etc. 
 
